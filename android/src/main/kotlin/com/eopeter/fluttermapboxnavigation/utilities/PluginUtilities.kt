@@ -46,7 +46,7 @@ class PluginUtilities {
             val jsonString =
                 if (MapBoxEvents.MILESTONE_EVENT == event || event == MapBoxEvents.USER_OFF_ROUTE || event == MapBoxEvents.ROUTE_BUILT || event == MapBoxEvents.ON_MAP_TAP) "{" +
                         "  \"eventType\": \"${event.value}\"," +
-                        "  \"data\": $data" +
+                        "  \"data\": ${data != "" ? data : ""}" +
                         "}" else "{" +
                         "  \"eventType\": \"${event.value}\"," +
                         "  \"data\": \"$data\"" +
